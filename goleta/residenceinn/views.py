@@ -1,6 +1,6 @@
-from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from residenceinn.serializers import UserSerializer, GroupSerializer
+from residenceinn.serializers import *
+from residenceinn.models import *
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -17,3 +17,36 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+
+class AppViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = App.objects.all()
+    serializer_class = AppSerializer
+
+
+class AppLabelViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = AppLabel.objects.all()
+    serializer_class = AppLabelSerializer
+
+
+class ShortNewsViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = ShortNews.objects.all()
+    serializer_class = ShortNewsSerializer
+
+
+class BannerViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
+

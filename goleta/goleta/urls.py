@@ -21,6 +21,10 @@ from residenceinn import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'apps', views.AppViewSet)
+router.register(r'app_labels', views.AppLabelViewSet)
+router.register(r'short_news', views.ShortNewsViewSet)
+router.register(r'banners', views.BannerViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
