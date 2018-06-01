@@ -125,5 +125,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+MEDIA_URL = '/'
+MEDIA_ROOT = '/Users/Ethan/www/goleta/media'
+STATIC_ROOT = '/Users/Ethan/www/goleta/staticroot'
 STATIC_URL = '/static/'

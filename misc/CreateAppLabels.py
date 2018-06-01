@@ -13,7 +13,7 @@ appLableDataList = [('Exchanges', '交易所'),
                     ('Wallet', '钱包'),
                     ('Market software', '行情软件'),
                     ('Tool software', '工具软件'),
-                    ('Content information', '内容咨询'),
+                    ('Content information', '内容资讯'),
                     ('Block chain games', '区块链游戏'),
                     ('Industry application', '行业应用')]
 

@@ -25,6 +25,7 @@ class AppLabelSerializer(serializers.ModelSerializer):
     class Meta:
         model = AppLabel
         fields = '__all__'
+        depth = 1
 
 
 class ShortNewsSerializer(serializers.ModelSerializer):

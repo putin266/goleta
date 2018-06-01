@@ -1,1 +1,9 @@
 1. SET collation_connection = 'utf8_general_ci';
+2. download file:
+    r = requests.get(url='http://byb.world/Public/Admin/Uploads/2018-04-27/5ae2940650fad.png', stream=True)
+    if r.status_code == 200:
+        print('success')
+        with open('/Users/Ethan/www/tmp/test.png', 'wb') as f:
+            r.raw.decode_content = True
+            shutil.copyfileobj(r.raw, f)
+3.

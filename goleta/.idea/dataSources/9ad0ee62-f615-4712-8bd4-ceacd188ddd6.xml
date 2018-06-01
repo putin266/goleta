@@ -2605,128 +2605,133 @@ model</ColNames>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="557" parent="261" name="PRIMARY">
+    <column id="557" parent="261" name="img">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="558" parent="261" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="558" parent="262" name="id">
+    <column id="559" parent="262" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="559" parent="262" name="applabel_id">
+    <column id="560" parent="262" name="applabel_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="560" parent="262" name="app_id">
+    <column id="561" parent="262" name="app_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="561" parent="262" name="residenceinn_applabel_apps_applabel_id_app_id_eea1c27a_uniq">
+    <index id="562" parent="262" name="residenceinn_applabel_apps_applabel_id_app_id_eea1c27a_uniq">
       <ColNames>applabel_id
 app_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="562" parent="262" name="residenceinn_applabe_app_id_2187927f_fk_residence">
+    <index id="563" parent="262" name="residenceinn_applabe_app_id_2187927f_fk_residence">
       <ColNames>app_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="563" parent="262" name="PRIMARY">
+    <key id="564" parent="262" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="564" parent="262" name="residenceinn_applabel_apps_applabel_id_app_id_eea1c27a_uniq">
+    <key id="565" parent="262" name="residenceinn_applabel_apps_applabel_id_app_id_eea1c27a_uniq">
       <ColNames>applabel_id
 app_id</ColNames>
       <UnderlyingIndexName>residenceinn_applabel_apps_applabel_id_app_id_eea1c27a_uniq</UnderlyingIndexName>
     </key>
-    <foreign-key id="565" parent="262" name="residenceinn_applabe_applabel_id_3d957e9e_fk_residence">
+    <foreign-key id="566" parent="262" name="residenceinn_applabe_applabel_id_3d957e9e_fk_residence">
       <ColNames>applabel_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>residenceinn_applabel</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="566" parent="262" name="residenceinn_applabe_app_id_2187927f_fk_residence">
+    <foreign-key id="567" parent="262" name="residenceinn_applabe_app_id_2187927f_fk_residence">
       <ColNames>app_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>residenceinn_app</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="567" parent="263" name="id">
+    <column id="568" parent="263" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="568" parent="263" name="img">
+    <column id="569" parent="263" name="img">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="569" parent="263" name="index">
+    <column id="570" parent="263" name="index">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="570" parent="263" name="PRIMARY">
+    <key id="571" parent="263" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="571" parent="264" name="id">
+    <column id="572" parent="264" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="572" parent="264" name="title">
+    <column id="573" parent="264" name="title">
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="573" parent="264" name="img">
+    <column id="574" parent="264" name="img">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="574" parent="264" name="ms">
+    <column id="575" parent="264" name="ms">
       <Position>4</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="575" parent="264" name="content">
+    <column id="576" parent="264" name="content">
       <Position>5</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="576" parent="264" name="index">
+    <column id="577" parent="264" name="index">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="577" parent="264" name="date_created">
+    <column id="578" parent="264" name="date_created">
       <Position>7</Position>
       <DataType>datetime(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="578" parent="264" name="is_fav">
+    <column id="579" parent="264" name="is_fav">
       <Position>8</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="579" parent="264" name="PRIMARY">
+    <key id="580" parent="264" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

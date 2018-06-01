@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73b124e0-8743-4e7d-823d-e350642f2e2a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0002_auto_20180530_0505.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0003_auto_20180530_0520.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0004_auto_20180530_0522.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0005_auto_20180530_0523.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0006_applabel_cn_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0007_applabel_img.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/.idea/misc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/CreateAppLabels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/FetchAppListData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/Test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/UpdateDatabase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../misc/tips" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0008_auto_20180601_0609.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../misc/MyUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ad0ee62-f615-4712-8bd4-ceacd188ddd6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9ad0ee62-f615-4712-8bd4-ceacd188ddd6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goleta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goleta/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goleta/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/goleta/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/residenceinn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/residenceinn/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/residenceinn/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/residenceinn/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../misc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../misc/CreateAppLabels.py" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/CreateAppLabels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../misc/FetchAppListData.py" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/FetchAppListData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../misc/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../misc/tips" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/tips" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,6 +22,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/goleta$tests.coverage" NAME="tests Coverage Results" MODIFIED="1527835921343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/residenceinn" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -68,23 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goleta/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1830">
+              <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -92,8 +76,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/residenceinn/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="105">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -101,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="480">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -113,8 +97,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goleta/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="343">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#640#672#0" expanded="true" />
               </folding>
@@ -133,6 +117,9 @@
       <find>boolean</find>
       <find>primary</find>
       <find>star</find>
+      <find>m</find>
+      <find>default_fi</find>
+      <find>static_URL</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,12 +134,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/residenceinn/views.py" />
-        <option value="$PROJECT_DIR$/goleta/urls.py" />
-        <option value="$PROJECT_DIR$/residenceinn/serializers.py" />
-        <option value="$PROJECT_DIR$/goleta/settings.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9ad0ee62-f615-4712-8bd4-ceacd188ddd6/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9ad0ee62-f615-4712-8bd4-ceacd188ddd6/console.sql" />
+        <option value="$PROJECT_DIR$/goleta/urls.py" />
+        <option value="$PROJECT_DIR$/goleta/settings.py" />
+        <option value="$PROJECT_DIR$/residenceinn/serializers.py" />
         <option value="$PROJECT_DIR$/residenceinn/models.py" />
+        <option value="$PROJECT_DIR$/residenceinn/tests.py" />
       </list>
     </option>
   </component>
@@ -189,6 +177,11 @@
               <item name="goleta" type="462c0819:PsiDirectoryNode" />
               <item name="goleta" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="goleta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goleta" type="462c0819:PsiDirectoryNode" />
+              <item name="residenceinn" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -216,7 +209,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.tests">
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="goleta" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/residenceinn" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/residenceinn/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="goleta" type="Python.DjangoServer" factoryName="Django server">
       <module name="goleta" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,6 +252,15 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
+    <list>
+      <item itemvalue="Django server.goleta" />
+      <item itemvalue="Python.tests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -280,7 +301,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -290,10 +310,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info active="true" anchor="bottom" id="manage.py@goleta" order="7" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32969698" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972875" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972875" visible="true" weight="0.26037195" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18097281" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5027125" side_tool="true" weight="0.25679544" />
@@ -304,7 +323,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32969698" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.32969698" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,122 +344,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/goleta/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goleta/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goleta/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goleta/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goleta/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/auth_permission.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ad0ee62-f615-4712-8bd4-ceacd188ddd6/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -450,44 +358,355 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ad0ee62-f615-4712-8bd4-ceacd188ddd6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="20" />
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="435">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_banner">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel_apps">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/django/conf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/residenceinn/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_app">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/residenceinn/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goleta/settings.py">
+    <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        <state relative-caret-position="480">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
+    <entry file="file://$PROJECT_DIR$/goleta/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        <state relative-caret-position="343">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goleta/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
         </state>
       </provider>
     </entry>
