@@ -1,6 +1,11 @@
 from rest_framework import viewsets
+from rest_framework import pagination
+from rest_framework import views
+from rest_framework import response
+from rest_framework import status
 from residenceinn.serializers import *
 from residenceinn.models import *
+import json
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -27,6 +32,18 @@ class AppViewSet(viewsets.ModelViewSet):
     serializer_class = AppSerializer
 
 
+class PaginatedAppView(views.APIView):
+    """
+    API endpoint that allows paginated groups to be viewed or edited.
+    """
+    def get(self, request):
+        applist = App.objects.all()
+        paginator = pagination.PageNumberPagination()
+        result_page = paginator.paginate_queryset(applist, request)
+        serializer = AppSerializer(result_page, many=True)
+        return paginator.get_paginated_response(serializer.data)
+
+
 class AppLabelViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
@@ -49,4 +66,19 @@ class BannerViewSet(viewsets.ModelViewSet):
     """
     queryset = Banner.objects.all()
     serializer_class = BannerSerializer
+
+
+class IndexView(views.APIView):
+    """
+    API endpoint that allows index to be viewed.
+    """
+    def get(self, request):
+        return_data = {}
+        bannerlist = BannerSerializer(Banner.objects.all(), many=True)
+        return_data['bannerlist'] = bannerlist.data
+        applabellist = AppLabelSerializerForIndex(AppLabel.objects.all(), many=True)
+        return_data['applist'] = applabellist.data
+        return response.Response(return_data, status.HTTP_200_OK)
+
+
 

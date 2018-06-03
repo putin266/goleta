@@ -129,3 +129,8 @@ MEDIA_URL = '/'
 MEDIA_ROOT = '/Users/Ethan/www/goleta/media'
 STATIC_ROOT = '/Users/Ethan/www/goleta/staticroot'
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20
+}

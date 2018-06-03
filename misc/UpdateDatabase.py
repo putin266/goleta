@@ -3,3 +3,4 @@
 import subprocess
 import os
 
+subprocess.call(['python3', './CreateAppLabels.py'])

@@ -1,6 +1,10 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
+from rest_framework import pagination
+from rest_framework.fields import SerializerMethodField
+
 from residenceinn.models import *
+
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -22,6 +26,19 @@ class AppSerializer(serializers.ModelSerializer):
 
 
 class AppLabelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AppLabel
+        fields = '__all__'
+        depth = 1
+
+
+class AppLabelSerializerForIndex(serializers.ModelSerializer):
+    apps = SerializerMethodField()
+
+    def get_apps(self, label):
+        label = AppLabel.objects.filter(id=label.id).first()
+        return AppSerializer(label.apps.all()[:4], many=True).data
+
     class Meta:
         model = AppLabel
         fields = '__all__'

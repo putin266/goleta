@@ -26,6 +26,7 @@ class App(models.Model):
 
 class AppLabel(models.Model):
     id = models.AutoField(primary_key=True)
+    code = models.IntegerField(blank=True, null=True)
     name = models.TextField(blank=True, null=True)
     cn_name = models.TextField(blank=True, null=True)
     img = models.ImageField(upload_to='upload/app_label/icon/', blank=True, null=True)
