@@ -2,3 +2,7 @@ django
 djangorestframework
 mysqlclient
 Pillow
+django-oauth-toolkit
+django-cors-middleware
+django-allauth
+django-rest-swagger

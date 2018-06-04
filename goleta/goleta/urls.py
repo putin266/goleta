@@ -19,6 +19,9 @@ from rest_framework import routers
 from residenceinn import views
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='DAppDapp API')
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -31,7 +34,10 @@ router.register(r'banners', views.BannerViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
+    url(r'^$', schema_view),
     url(r'^', include(router.urls)),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^admin/', admin.site.urls),
     url(r'^applist/', views.PaginatedAppView.as_view(), name='applist'),
