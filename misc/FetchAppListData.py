@@ -78,6 +78,7 @@ def update_app(app, appinfo):
     app.android_size = appinfo['andr_size']
     app.android_url = appinfo['andr_url']
     app.ios_url = appinfo['ios_url']
+    app.web_url = ''
     app.save()
 
 

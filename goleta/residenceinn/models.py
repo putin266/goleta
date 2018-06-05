@@ -22,6 +22,7 @@ class App(models.Model):
     android_size = models.CharField(max_length=254, blank=True, null=True)
     android_url = models.TextField(blank=True, null=True)
     ios_url = models.TextField(blank=True, null=True)
+    web_url = models.TextField(blank=True, null=True)
 
 
 class AppLabel(models.Model):
@@ -30,6 +31,7 @@ class AppLabel(models.Model):
     name = models.TextField(blank=True, null=True)
     cn_name = models.TextField(blank=True, null=True)
     img = models.ImageField(upload_to='upload/app_label/icon/', blank=True, null=True)
+    web_url = models.TextField(blank=True, null=True)
     apps = models.ManyToManyField(App)
 
 

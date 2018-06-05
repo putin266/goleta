@@ -18,5 +18,6 @@ for i in range(4):
         banner = Banner()
         banner.img = 'test'
         banner.index = i + 1
+        banner.web_url = ''
         banner.save()
 
