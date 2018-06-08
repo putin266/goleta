@@ -43,7 +43,7 @@ class PaginatedAppView(views.APIView):
         applist = App.objects.order_by('id').all()
         paginator = pagination.PageNumberPagination()
         result_page = paginator.paginate_queryset(applist, request)
-        serializer = AppSerializer(result_page, many=True)
+        serializer = AppSerializer(result_page, many=True, context={"request": request})
         return paginator.get_paginated_response(serializer.data)
 
 
