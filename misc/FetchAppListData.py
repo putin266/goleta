@@ -47,7 +47,7 @@ def get_file_name(ip_str):
 
 
 def update_app(app, appinfo):
-    if appinfo['app_logo'] is not None and not appinfo['app_logo'] and not MyUtils.is_file_exist(get_file_name(appinfo['app_logo']), settings.MEDIA_ROOT):
+    if appinfo['app_logo'] is not None and appinfo['app_logo'] and not MyUtils.is_file_exist(get_file_name(appinfo['app_logo']), settings.MEDIA_ROOT):
         r = requests.get(url='http://byb.world' + appinfo['app_logo'], stream=True)
         if r.status_code == 200:
             print('app logo success')
@@ -64,7 +64,7 @@ def update_app(app, appinfo):
     app.is_ph = bool(appinfo['is_ph'])
     app.is_hot = bool(appinfo['is_hot'])
     app.android_package_name = appinfo['andr_baoname']
-    if appinfo['andr_apk'] is not None and not appinfo['andr_apk'] and not MyUtils.is_file_exist(get_file_name(appinfo['andr_apk']), settings.MEDIA_ROOT):
+    if appinfo['andr_apk'] is not None and appinfo['andr_apk'] and not MyUtils.is_file_exist(get_file_name(appinfo['andr_apk']), settings.MEDIA_ROOT):
         if 'http' in appinfo['andr_apk']:
             tmp_url = appinfo['andr_apk']
         else:

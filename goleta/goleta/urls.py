@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework_swagger.views import get_swagger_view
 
-schema_view = get_swagger_view(title='DAppDapp API')
+schema_view = get_swagger_view(title='DAppDapp API', url='/')
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)

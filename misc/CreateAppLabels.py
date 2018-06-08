@@ -15,7 +15,8 @@ appLableDataList = [('Exchanges', '交易所', 1),
                     ('Tool software', '工具软件', 4),
                     ('Content information', '内容资讯', 5),
                     ('Block chain games', '区块链游戏', 6),
-                    ('Industry application', '行业应用', 7)]
+                    ('Industry application', '行业应用', 7),
+                    ('Selected', '精选', 8)]
 
 for label in appLableDataList:
     ll = AppLabel.objects.all().filter(name=label[0], cn_name=label[1])
