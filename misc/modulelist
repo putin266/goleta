@@ -6,3 +6,4 @@ django-oauth-toolkit
 django-cors-middleware
 django-allauth
 django-rest-swagger
+gunicorn

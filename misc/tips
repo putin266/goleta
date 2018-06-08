@@ -6,4 +6,4 @@
         with open('/Users/Ethan/www/tmp/test.png', 'wb') as f:
             r.raw.decode_content = True
             shutil.copyfileobj(r.raw, f)
-3.
+3.apt install libmysqlclient-dev before pip3 install
