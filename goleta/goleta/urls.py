@@ -44,4 +44,5 @@ urlpatterns = [
     url(r'^index/', views.IndexView.as_view(), name='index'),
     url(r'^app_leader_board/', views.AppLeaderBoardView.as_view(), name='app_leader_board'),
     url(r'^selected_apps/', views.SeletedAppsView.as_view(), name='selected_apps'),
+    url(r'^app_search/(?P<app_name>\w{1,50})/$', views.AppSearchView.as_view(), name='app_search'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

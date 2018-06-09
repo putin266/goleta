@@ -107,3 +107,17 @@ class AppLeaderBoardView(views.APIView):
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
+
+class AppSearchView(views.APIView):
+    """
+    API endpoint that allows app search to be viewed.
+    """
+    def get(self, request, app_name):
+        return_data = {}
+        applist = []
+        for app in App.objects.all():
+            if app_name.lower() in app.app_name.lower():
+                applist.append(app)
+        applabellist = AppSerializer(applist, many=True)
+        return_data['applist'] = applabellist.data
+        return response.Response(return_data, status.HTTP_200_OK)
