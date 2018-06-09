@@ -22,7 +22,7 @@ def update_banner_type():
             banner.save()
 
 def add_leaderboard_apps():
-    list = ['Mytoken','币安','ImToken','huobi','布洛克城','电报telegram','币乎','非小号','okex','知识星球','币世界','知币','网易星球','币用','gate.io','币牛牛','tokenclub','币看bitkan','巴比特','加密猫','链得得']
+    list = ['Mytoken','币安Binance','ImToken','火币','布洛克城','电报telegram','币乎','非小号','okex','知识星球','币世界','知币','网易星球','币用','gate.io','币牛牛','tokenclub','币看bitkan','巴比特','加密猫','链得得', 'bitfinex','kcash','芥末圈','zb','谷歌身份验证器','币信','ONO','迅雷玩客猴','bitpay','火球','币助手','陀螺财经','百度莱茨狗']
     i = 1
     for app in App.objects.all():
         app.leaderboard_index = 0
@@ -34,6 +34,8 @@ def add_leaderboard_apps():
             applist[0].leaderboard_index= i
             applist[0].save()
             i = i + 1
+        else:
+            print('not exist:' + str(name.encode('utf8')))
 
 
 def addlableapps():
