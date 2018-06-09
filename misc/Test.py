@@ -17,8 +17,9 @@ from residenceinn.models import App, AppLabel, Banner
 def do():
     banners = Banner.objects.all()
     for banner in banners:
-        banner.type = 1
-        banner.save()
+        if banner.type != 2:
+            banner.type = 1
+            banner.save()
 
 def addlableapps():
     label = AppLabel.objects.filter(id='8').all()[0]

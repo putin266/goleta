@@ -25,7 +25,7 @@ SECRET_KEY = '#_&w8kf0qg%du9*8i8lc=$9c%(^4_pd2x6@noe2vj9xdceb6!0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['poiapoi.com', 'forblock.io', '127.0.0.1']
+ALLOWED_HOSTS = ['poiapoi.com', 'forblock.io']
 
 
 # Application definition
@@ -103,8 +103,8 @@ DATABASES = {
         },
         'NAME': 'goleta',
         'USER': 'root',
-        'PASSWORD': '232101',
-        'HOST': '127.0.0.1',
+        'PASSWORD': '232101Ecs',
+        'HOST': 'rm-uf6lymkkzhwjog319.mysql.rds.aliyuncs.com',
         'PORT': '3306',
         'default-character-set': 'utf8'
     }
@@ -146,8 +146,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 MEDIA_URL = '/'
-MEDIA_ROOT = '/Users/Ethan/www/goleta/media'
-STATIC_ROOT = '/Users/Ethan/www/goleta/staticroot'
+MEDIA_ROOT = '/var/www/goleta/media'
+STATIC_ROOT = '/var/www/goleta/staticroot'
 STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {

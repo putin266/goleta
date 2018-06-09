@@ -92,7 +92,7 @@ class SeletedAppsView(views.APIView):
         return_data = {}
         bannerlist = BannerSerializer(Banner.objects.filter(type=2).all(), many=True)
         return_data['bannerlist'] = bannerlist.data
-        applabellist = AppLabelSerializerForIndex(AppLabel.objects.filter(type=2).all(), many=True)
+        applabellist = AppLabelSerializer(AppLabel.objects.filter(type=2).all()[0])
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
