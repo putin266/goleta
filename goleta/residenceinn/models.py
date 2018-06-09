@@ -12,6 +12,7 @@ class App(models.Model):
     contents = models.TextField(blank=True, null=True)
     tj_ms = models.TextField(blank=True, null=True)
     index = models.IntegerField(blank=True, null=True)
+    leaderboard_index = models.IntegerField(blank=True, null=True)
     is_tj = models.BooleanField(blank=True, default=False)
     is_ph = models.BooleanField(blank=True, default=False)
     is_hot = models.BooleanField(blank=True, default=False)

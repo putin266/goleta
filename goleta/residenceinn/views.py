@@ -86,7 +86,7 @@ class IndexView(views.APIView):
 
 class SeletedAppsView(views.APIView):
     """
-    API endpoint that allows index to be viewed.
+    API endpoint that allows selected apps to be viewed.
     """
     def get(self, request):
         return_data = {}
@@ -96,4 +96,14 @@ class SeletedAppsView(views.APIView):
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
+
+class AppLeaderBoardView(views.APIView):
+    """
+    API endpoint that allows app leader board to be viewed.
+    """
+    def get(self, request):
+        return_data = {}
+        applabellist = AppSerializer(App.objects.filter(leaderboard_index__gt=0).order_by('leaderboard_index'), many=True)
+        return_data['applist'] = applabellist.data
+        return response.Response(return_data, status.HTTP_200_OK)
 

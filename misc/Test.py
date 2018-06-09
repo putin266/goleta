@@ -14,12 +14,27 @@ django.setup()
 
 from residenceinn.models import App, AppLabel, Banner
 
-def do():
+def update_banner_type():
     banners = Banner.objects.all()
     for banner in banners:
         if banner.type != 2:
             banner.type = 1
             banner.save()
+
+def add_leaderboard_apps():
+    list = ['Mytoken','币安','ImToken','huobi','布洛克城','电报telegram','币乎','非小号','okex','知识星球','币世界','知币','网易星球','币用','gate.io','币牛牛','tokenclub','币看bitkan','巴比特','加密猫','链得得']
+    i = 1
+    for app in App.objects.all():
+        app.leaderboard_index = 0
+        app.save()
+    for name in list:
+        applist = App.objects.filter(app_name=name).all()
+        if len(applist) > 0:
+            print(applist[0].id)
+            applist[0].leaderboard_index= i
+            applist[0].save()
+            i = i + 1
+
 
 def addlableapps():
     label = AppLabel.objects.filter(id='8').all()[0]
@@ -102,5 +117,5 @@ def update_app(app, appinfo):
     app.web_url = ''
     app.save()
 
-do()
+add_leaderboard_apps()
 
