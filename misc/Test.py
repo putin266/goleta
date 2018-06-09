@@ -12,7 +12,13 @@ sys.path.append("../goleta")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goleta.settings")
 django.setup()
 
-from residenceinn.models import App, AppLabel
+from residenceinn.models import App, AppLabel, Banner
+
+def do():
+    banners = Banner.objects.all()
+    for banner in banners:
+        banner.type = 1
+        banner.save()
 
 def addlableapps():
     label = AppLabel.objects.filter(id='8').all()[0]
@@ -26,7 +32,7 @@ def addlableapps():
             print(name)
     label.save()
 
-def do():
+def add_a_new_app():
     app = App.objects.filter(app_name='币车').all()[0]
     local_file = open('/root/www/goleta/media/upload/app/logo/tmp.png', 'rb')
     file = File(local_file)

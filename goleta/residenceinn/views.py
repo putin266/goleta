@@ -77,11 +77,23 @@ class IndexView(views.APIView):
     """
     def get(self, request):
         return_data = {}
-        bannerlist = BannerSerializer(Banner.objects.all(), many=True)
+        bannerlist = BannerSerializer(Banner.objects.filter(type=1).all(), many=True)
         return_data['bannerlist'] = bannerlist.data
-        applabellist = AppLabelSerializerForIndex(AppLabel.objects.all(), many=True)
+        applabellist = AppLabelSerializerForIndex(AppLabel.objects.filter(type=1).all(), many=True)
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
+
+class SeletedAppsView(views.APIView):
+    """
+    API endpoint that allows index to be viewed.
+    """
+    def get(self, request):
+        return_data = {}
+        bannerlist = BannerSerializer(Banner.objects.filter(type=2).all(), many=True)
+        return_data['bannerlist'] = bannerlist.data
+        applabellist = AppLabelSerializerForIndex(AppLabel.objects.filter(type=2).all(), many=True)
+        return_data['applist'] = applabellist.data
+        return response.Response(return_data, status.HTTP_200_OK)
 
 

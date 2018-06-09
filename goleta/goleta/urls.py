@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^admin/', admin.site.urls),
-    url(r'^applist/', views.PaginatedAppView.as_view(), name='applist'),
+    # url(r'^applist/', views.PaginatedAppView.as_view(), name='applist'),
     url(r'^index/', views.IndexView.as_view(), name='index'),
+    url(r'^selected_apps/', views.SeletedAppsView.as_view(), name='selected_apps'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

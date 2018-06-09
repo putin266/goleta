@@ -32,12 +32,14 @@ class AppLabel(models.Model):
     cn_name = models.TextField(blank=True, null=True)
     img = models.ImageField(upload_to='upload/app_label/icon/', blank=True, null=True)
     web_url = models.TextField(blank=True, null=True)
+    type = models.IntegerField(blank=True, null=True)
     apps = models.ManyToManyField(App)
 
 
 class Banner(models.Model):
     id = models.AutoField(primary_key=True)
     img = models.ImageField(upload_to='banner/', blank=True, null=True)
+    type = models.IntegerField(blank=True, null=True)
     index = models.IntegerField(blank=True, null=True)
 
 
