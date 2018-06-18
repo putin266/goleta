@@ -3,25 +3,46 @@ from rest_framework import views
 from rest_framework import response
 from rest_framework import status
 from rest_framework import permissions
+from rest_framework import mixins
+from rest_framework import authentication
+from oauth2_provider.contrib.rest_framework import OAuth2Authentication
 from residenceinn.serializers import *
 from residenceinn.models import *
+from allauth.socialaccount.providers.weixin.views import WeixinOAuth2Adapter
+from rest_auth.registration.views import SocialLoginView
 from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
+from residenceinn.sms_send import SmsSender
+from residenceinn import smsconst
+import datetime
+from datetime import timezone
+import json
 
 
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser, TokenHasReadWriteScope]
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
+
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = UserProfileSerializer
+
+    def get_queryset(self):
+        return UserProfile.objects.filter(user=self.request.user)
 
 
 class GroupViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
-    permission_classes = [permissions.IsAuthenticated, TokenHasScope]
+    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser, TokenHasScope]
     required_scopes = ['groups']
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
@@ -67,6 +88,8 @@ class BannerViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
+    permission_classes = (permissions.IsAuthenticated,)
+    # authentication_classes = (OAuth2Authentication,)
     queryset = Banner.objects.all()
     serializer_class = BannerSerializer
 
@@ -121,3 +144,58 @@ class AppSearchView(views.APIView):
         applabellist = AppSerializer(applist, many=True)
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
+
+
+class WeiXinLogin(SocialLoginView):
+    adapter_class = WeixinOAuth2Adapter
+
+
+class TransactionListView(mixins.ListModelMixin,
+                          viewsets.GenericViewSet):
+    """
+    API endpoint that allows transactions to be viewed
+    """
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = TransactionSerializer
+
+    def get_queryset(self):
+        try:
+            wallet = Wallet.objects.get(owner=self.request.user)
+        except Wallet.DoesNotExist:
+            return []
+        return Transaction.objects.filter(wallet=wallet)
+
+
+class SendConfirmationCodeView(views.APIView):
+    """
+    API endpoint that let server to send a sms code
+    """
+    permission_classes = []
+
+    def get(self, request, mobile_number):
+        if mobile_number == '':
+            return
+        try:
+            keyvalue = KeyValue.objects.get(key=mobile_number)
+            if keyvalue.date_created + datetime.timedelta(minutes=1) > datetime.datetime.now(timezone.utc):
+                return
+            else:
+                keyvalue.value = self.get_new_salt()
+                keyvalue.date_created = datetime.datetime.now(timezone.utc)
+                keyvalue.date_expired = keyvalue.date_created + datetime.timedelta(minutes=5)
+        except KeyValue.DoesNotExist:
+            keyvalue = KeyValue.objects.create(key=mobile_number, value=self.get_new_salt(),
+                                               date_created=datetime.datetime.now(timezone.utc),
+                                               date_expired=datetime.datetime.now(timezone.utc) + datetime.timedelta(minutes=5))
+        keyvalue.save()
+        params = '{"code":"' + keyvalue.value + '"}'
+        return_data = SmsSender.send_sms('', mobile_number, smsconst.SMS_SIGN, smsconst.SMS_TEMPLATE_CODE_REG, params)
+        return response.Response(json.loads(return_data), status.HTTP_200_OK)
+
+    @staticmethod
+    def get_new_salt():
+        return ''.join(random.sample(string.digits, 6))
+
+
+
+

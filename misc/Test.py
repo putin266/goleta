@@ -4,6 +4,8 @@ import sys
 import os
 import django
 import requests
+import random
+import string
 from MyUtils import MyUtils
 from django.conf import settings
 from django.core.files import File
@@ -119,5 +121,15 @@ def update_app(app, appinfo):
     app.web_url = ''
     app.save()
 
-add_leaderboard_apps()
+
+def get_random_string():
+    salt = ''.join(random.sample(string.ascii_letters + string.digits, 4))
+    print(salt)
+
+
+def create_user_profile():
+    pass
+
+
+get_random_string()
 

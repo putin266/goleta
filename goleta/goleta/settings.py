@@ -25,7 +25,7 @@ SECRET_KEY = '#_&w8kf0qg%du9*8i8lc=$9c%(^4_pd2x6@noe2vj9xdceb6!0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['poiapoi.com', 'forblock.io']
+ALLOWED_HOSTS = ['poiapoi.com', 'forblock.io', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -39,24 +39,34 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'oauth2_provider',
-    'corsheaders',
+    'rest_framework.authtoken',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.weibo',
+    'allauth.socialaccount.providers.weixin',
+    'oauth2_provider',
+    'corsheaders',
     'residenceinn.apps.ResidenceinnConfig',
     'rest_framework_swagger',
+    'rest_auth',
+    'rest_auth.registration',
 ]
 
 SITE_ID = 1
 
+SOCIALACCOUNT_PROVIDERS = {
+    'weixin': {
+        'AUTHORIZE_URL': 'https://open.weixin.qq.com/connect/oauth2/authorize',  # for media platform
+        'SCOPE': ['snsapi_base'],
+    }
+}
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -155,15 +165,27 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20,
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ),
-    #'DEFAULT_PERMISSION_CLASSES': (
-    #    'rest_framework.permissions.IsAuthenticated',
-    #)
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
 }
 
 OAUTH2_PROVIDER = {
     # this is the list of available scopes
-    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'}
+    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'},
+    'REQUEST_APPROVAL_PROMPT': 'auto',
+}
+
+SWAGGER_SETTINGS = {
+    "SECURITY_DEFINITIONS": {
+        'basic': {
+            "type": "basic",
+        }
+    }
 }
 
 EMAIL_HOST = 'smtp.gmail.com'
@@ -172,4 +194,10 @@ EMAIL_HOST_PASSWORD = '232101google'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+LOGIN_URL = '/api-auth/login/'
+LOGOUT_URL = '/api-auth/logout/'
 LOGIN_REDIRECT_URL = '/'
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'residenceinn.serializers.ExtendedRegisterSerializer',
+}
