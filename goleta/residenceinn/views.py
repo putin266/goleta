@@ -189,7 +189,7 @@ class SendConfirmationCodeView(views.APIView):
                                                date_expired=datetime.datetime.now(timezone.utc) + datetime.timedelta(minutes=5))
         keyvalue.save()
         params = '{"code":"' + keyvalue.value + '"}'
-        return_data = SmsSender.send_sms('', mobile_number, smsconst.SMS_SIGN, smsconst.SMS_TEMPLATE_CODE_REG, params)
+        return_data = SmsSender.send_sms('', mobile_number, smsconst.SMS_SIGN, smsconst.SMS_TEMPLATE_CODE_REG, params).decode('utf-8')
         return response.Response(json.loads(return_data), status.HTTP_200_OK)
 
     @staticmethod

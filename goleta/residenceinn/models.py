@@ -5,7 +5,7 @@ from django.contrib.auth.models import User, Group
 class UserProfile(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, db_index=True)
-    inviter = models.ForeignKey(User, related_name='inviter', null=True)
+    inviter = models.ForeignKey(User, related_name='inviter', null=True, on_delete=models.SET_NULL)
     mobile_number = models.CharField(max_length=20, blank=True, null=True, db_index=True)
     invitation_code = models.CharField(max_length=254, blank=True, null=True, db_index=True)
 
@@ -66,13 +66,13 @@ class ShortNews(models.Model):
 
 class Wallet(models.Model):
     id = models.AutoField(primary_key=True)
-    owner = models.OneToOneField(User)
+    owner = models.OneToOneField(User, on_delete=models.CASCADE)
     balance = models.DecimalField(default=0, decimal_places=2, max_digits=12)
 
 
 class Transaction(models.Model):
     id = models.BigAutoField(primary_key=True)
-    wallet = models.ForeignKey(Wallet, null=True)
+    wallet = models.ForeignKey(Wallet, null=True, on_delete=models.CASCADE)
     trans_type = models.CharField(max_length=254)
     amount = models.DecimalField(decimal_places=2, max_digits=12)
     trans_date = models.DateTimeField(auto_now_add=True)
