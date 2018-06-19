@@ -9,6 +9,9 @@ from rest_framework.fields import SerializerMethodField
 from rest_auth.registration.serializers import RegisterSerializer
 from datetime import datetime
 from datetime import timezone
+from django.utils.encoding import force_text
+from django.utils.http import urlsafe_base64_decode as uid_decoder
+from django.contrib.auth.models import User, Group
 
 from residenceinn.models import *
 
@@ -167,3 +170,57 @@ class ExtendedRegisterSerializer(RegisterSerializer):
     def is_mobile_number_used(mobile_number):
         return len(UserProfile.objects.filter(mobile_number=mobile_number)) > 0
 
+
+class PasswordResetConfirmSerializer(serializers.Serializer):
+    """
+    Serializer for requesting a password reset e-mail.
+    """
+    new_password1 = serializers.CharField(max_length=128)
+    new_password2 = serializers.CharField(max_length=128)
+    mobile_number = serializers.CharField(max_length=20)
+    sms_code = serializers.CharField(max_length=10)
+
+    def validate(self, data):
+        self._errors = {}
+
+        # Decode the uidb64 to uid to get User object
+        try:
+            self.user = UserProfile.objects.get(mobile_number=data['mobile_number']).user
+        except UserProfile.DoesNotExist:
+            raise serializers.ValidationError(
+                _('Invalid Mobile Number.')
+            )
+
+        # Construct SetPasswordForm instance
+        if not self.is_password_valid(data['new_password1'], data['new_password2']):
+            raise serializers.ValidationError(
+                _('Invalid password.')
+            )
+        if not self.is_smscode_valid(data['mobile_number'], data['sms_code']):
+            raise serializers.ValidationError(
+                _('SMS password not correct.')
+            )
+
+        return data
+
+    def is_password_valid(self, password1, password2):
+        if password1 == '':
+            return False
+        if password1 != password2:
+            return False
+        return True
+
+    def is_smscode_valid(self, mobile_number, sms_code):
+        try:
+            keyvalue = KeyValue.objects.get(key='reset' + mobile_number)
+            if keyvalue.date_expired < datetime.now(timezone.utc) or keyvalue.value != sms_code:
+                return False
+        except KeyValue.DoesNotExist:
+            return False
+        keyvalue.delete()
+        return True
+
+    def save(self):
+        self.user.set_password(self.data['new_password1'])
+        self.user.save()
+        return self.user

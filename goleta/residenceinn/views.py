@@ -209,5 +209,36 @@ class SendConfirmationCodeView(views.APIView):
         return ''.join(random.sample(string.digits, 6))
 
 
+class SendPasswordResetSmsCodeView(views.APIView):
+    """
+    API endpoint that let server to send a sms code
+    """
+    permission_classes = []
+
+    def get(self, request, mobile_number):
+        if mobile_number == '':
+            return
+        try:
+            keyvalue = KeyValue.objects.get(key='reset' + mobile_number)
+            if keyvalue.date_created + datetime.timedelta(minutes=1) > datetime.datetime.now(timezone.utc):
+                return
+            else:
+                keyvalue.value = self.get_new_salt()
+                keyvalue.date_created = datetime.datetime.now(timezone.utc)
+                keyvalue.date_expired = keyvalue.date_created + datetime.timedelta(minutes=5)
+        except KeyValue.DoesNotExist:
+            keyvalue = KeyValue.objects.create(key='reset' + mobile_number, value=self.get_new_salt(),
+                                               date_created=datetime.datetime.now(timezone.utc),
+                                               date_expired=datetime.datetime.now(timezone.utc) + datetime.timedelta(minutes=5))
+        keyvalue.save()
+        params = '{"code":"' + keyvalue.value + '"}'
+        return_data = SmsSender.send_sms('', mobile_number, smsconst.SMS_SIGN, smsconst.SMS_TEMPLATE_CODE_RESET,
+                                         params).decode('utf-8')
+        return response.Response(json.loads(return_data), status.HTTP_200_OK)
+
+    @staticmethod
+    def get_new_salt():
+        return ''.join(random.sample(string.digits, 6))
+
 
 

@@ -52,4 +52,6 @@ urlpatterns = [
     url(r'^app_search/(?P<app_name>\w{1,50})/$', views.AppSearchView.as_view(), name='app_search'),
     url(r'^send_register_code/(?P<mobile_number>1\d{10})/$', views.SendConfirmationCodeView.as_view(),
         name='send_register_code'),
+    url(r'^send_reset_code/(?P<mobile_number>1\d{10})/$', views.SendPasswordResetSmsCodeView.as_view(),
+        name='send_reset_code'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

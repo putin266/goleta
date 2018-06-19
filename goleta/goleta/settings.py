@@ -201,3 +201,14 @@ LOGIN_REDIRECT_URL = '/'
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'residenceinn.serializers.ExtendedRegisterSerializer',
 }
+
+REST_AUTH_SERIALIZERS = {
+    'PASSWORD_RESET_CONFIRM_SERIALIZER': 'residenceinn.serializers.PasswordResetConfirmSerializer',
+}
+
+# https settings
+
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
