@@ -52,6 +52,7 @@ class AppViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
+    permission_classes = []
     queryset = App.objects.all()
     serializer_class = AppSerializer
 
@@ -60,6 +61,7 @@ class PaginatedAppView(views.APIView):
     """
     API endpoint that allows paginated groups to be viewed or edited.
     """
+    permission_classes = []
     def get(self, request):
         applist = App.objects.order_by('id').all()
         paginator = pagination.PageNumberPagination()
@@ -72,6 +74,7 @@ class AppLabelViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
+    permission_classes = []
     queryset = AppLabel.objects.all()
     serializer_class = AppLabelSerializer
 
@@ -80,6 +83,7 @@ class ShortNewsViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
+    permission_classes = []
     queryset = ShortNews.objects.all()
     serializer_class = ShortNewsSerializer
 
@@ -88,7 +92,7 @@ class BannerViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
-    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = []
     # authentication_classes = (OAuth2Authentication,)
     queryset = Banner.objects.all()
     serializer_class = BannerSerializer
@@ -98,6 +102,8 @@ class IndexView(views.APIView):
     """
     API endpoint that allows index to be viewed.
     """
+    permission_classes = []
+
     def get(self, request):
         return_data = {}
         bannerlist = BannerSerializer(Banner.objects.filter(type=1).all(), many=True)
@@ -111,6 +117,8 @@ class SeletedAppsView(views.APIView):
     """
     API endpoint that allows selected apps to be viewed.
     """
+    permission_classes = []
+
     def get(self, request):
         return_data = {}
         bannerlist = BannerSerializer(Banner.objects.filter(type=2).all(), many=True)
@@ -124,6 +132,8 @@ class AppLeaderBoardView(views.APIView):
     """
     API endpoint that allows app leader board to be viewed.
     """
+    permission_classes = []
+
     def get(self, request):
         return_data = {}
         applabellist = AppSerializer(App.objects.filter(leaderboard_index__gt=0).order_by('leaderboard_index'), many=True)
@@ -135,6 +145,8 @@ class AppSearchView(views.APIView):
     """
     API endpoint that allows app search to be viewed.
     """
+    permission_classes = []
+
     def get(self, request, app_name):
         return_data = {}
         applist = []
