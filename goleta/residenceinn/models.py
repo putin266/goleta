@@ -5,6 +5,7 @@ from django.contrib.auth.models import User, Group
 class UserProfile(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, db_index=True)
+    nickname = models.CharField(max_length=200, null=True, blank=True)
     inviter = models.ForeignKey(User, related_name='inviter', null=True, on_delete=models.SET_NULL)
     mobile_number = models.CharField(max_length=20, blank=True, null=True, db_index=True)
     invitation_code = models.CharField(max_length=254, blank=True, null=True, db_index=True)

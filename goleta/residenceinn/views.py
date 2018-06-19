@@ -22,7 +22,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser, TokenHasReadWriteScope]
+    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
 
@@ -42,7 +42,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
-    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser, TokenHasScope]
+    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
     required_scopes = ['groups']
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
@@ -62,6 +62,7 @@ class PaginatedAppView(views.APIView):
     API endpoint that allows paginated groups to be viewed or edited.
     """
     permission_classes = []
+
     def get(self, request):
         applist = App.objects.order_by('id').all()
         paginator = pagination.PageNumberPagination()

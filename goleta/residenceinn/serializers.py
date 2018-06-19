@@ -89,6 +89,8 @@ class ExtendedRegisterSerializer(RegisterSerializer):
     invitation_code = serializers.CharField(required=False, allow_blank=True)
     mobile_number = serializers.CharField()
     sms_code = serializers.CharField()
+    email = serializers.EmailField(allow_blank=True, required=False)
+    nickname = serializers.CharField(required=False, allow_blank=True)
 
     def validate_mobile_number(self, mobile_number):
         if not re.match(r'1\d{10}$', mobile_number):
@@ -123,6 +125,7 @@ class ExtendedRegisterSerializer(RegisterSerializer):
         else:
             user_profile = UserProfile()
         user_profile.user = user
+        user_profile.nickname = self.validated_data['nickname']
         user_profile.mobile_number = self.validated_data['mobile_number']
         user_profile.invitation_code = self.get_next_salt()
         user_profile.inviter = self.get_user_by_invitation_code(self.validated_data['invitation_code'])
