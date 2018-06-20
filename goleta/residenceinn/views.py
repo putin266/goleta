@@ -27,7 +27,10 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
-class UserProfileViewSet(viewsets.ModelViewSet):
+class UserProfileViewSet(mixins.ListModelMixin,
+                         mixins.RetrieveModelMixin,
+                         mixins.UpdateModelMixin,
+                         viewsets.GenericViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
@@ -48,7 +51,9 @@ class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = GroupSerializer
 
 
-class AppViewSet(viewsets.ModelViewSet):
+class AppViewSet(mixins.ListModelMixin,
+                 mixins.RetrieveModelMixin,
+                 viewsets.GenericViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
@@ -71,7 +76,9 @@ class PaginatedAppView(views.APIView):
         return paginator.get_paginated_response(serializer.data)
 
 
-class AppLabelViewSet(viewsets.ModelViewSet):
+class AppLabelViewSet(mixins.ListModelMixin,
+                      mixins.RetrieveModelMixin,
+                      viewsets.GenericViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
@@ -80,7 +87,9 @@ class AppLabelViewSet(viewsets.ModelViewSet):
     serializer_class = AppLabelSerializer
 
 
-class ShortNewsViewSet(viewsets.ModelViewSet):
+class ShortNewsViewSet(mixins.ListModelMixin,
+                       mixins.RetrieveModelMixin,
+                       viewsets.GenericViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
@@ -89,7 +98,9 @@ class ShortNewsViewSet(viewsets.ModelViewSet):
     serializer_class = ShortNewsSerializer
 
 
-class BannerViewSet(viewsets.ModelViewSet):
+class BannerViewSet(mixins.ListModelMixin,
+                    mixins.RetrieveModelMixin,
+                    viewsets.GenericViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
@@ -129,6 +140,16 @@ class SeletedAppsView(views.APIView):
         return response.Response(return_data, status.HTTP_200_OK)
 
 
+class MiningAppsView(mixins.ListModelMixin,
+                      viewsets.GenericViewSet):
+    """
+    API endpoint that allows selected apps to be viewed.
+    """
+    permission_classes = []
+    queryset = App.objects.filter(applabel=AppLabel.objects.filter(type=3)[0]).all()
+    serializer_class = AppSerializer
+
+
 class AppLeaderBoardView(views.APIView):
     """
     API endpoint that allows app leader board to be viewed.
@@ -164,6 +185,7 @@ class WeiXinLogin(SocialLoginView):
 
 
 class TransactionListView(mixins.ListModelMixin,
+                          mixins.RetrieveModelMixin,
                           viewsets.GenericViewSet):
     """
     API endpoint that allows transactions to be viewed

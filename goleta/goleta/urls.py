@@ -30,6 +30,7 @@ router.register(r'apps', views.AppViewSet)
 router.register(r'app_labels', views.AppLabelViewSet)
 router.register(r'short_news', views.ShortNewsViewSet)
 router.register(r'banners', views.BannerViewSet)
+router.register(r'mining_apps', views.MiningAppsView)
 router.register(r'user_profile', views.UserProfileViewSet, base_name='user_profile')
 router.register(r'transactions', views.TransactionListView, base_name='transactions')
 

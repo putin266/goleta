@@ -9,3 +9,4 @@ django-rest-swagger
 gunicorn
 django-rest-auth
 djangorestframework-jwt
+aliyun_sms

@@ -3419,308 +3419,313 @@ app_id</ColNames>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="719" parent="275" name="user_id">
+    <column id="719" parent="275" name="nickname">
+      <Position>6</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="720" parent="275" name="user_id">
       <ColNames>user_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="720" parent="275" name="residenceinn_userprofile_mobile_number_b3cbf553">
+    <index id="721" parent="275" name="residenceinn_userprofile_mobile_number_b3cbf553">
       <ColNames>mobile_number</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="721" parent="275" name="residenceinn_userprofile_invitation_code_f750e29d">
+    <index id="722" parent="275" name="residenceinn_userprofile_invitation_code_f750e29d">
       <ColNames>invitation_code</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="722" parent="275" name="residenceinn_userprofile_inviter_id_4c8a71e5_fk_auth_user_id">
+    <index id="723" parent="275" name="residenceinn_userprofile_inviter_id_4c8a71e5_fk_auth_user_id">
       <ColNames>inviter_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="723" parent="275" name="PRIMARY">
+    <key id="724" parent="275" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="724" parent="275" name="user_id">
+    <key id="725" parent="275" name="user_id">
       <ColNames>user_id</ColNames>
       <UnderlyingIndexName>user_id</UnderlyingIndexName>
     </key>
-    <foreign-key id="725" parent="275" name="residenceinn_userprofile_user_id_079322ce_fk_auth_user_id">
+    <foreign-key id="726" parent="275" name="residenceinn_userprofile_user_id_079322ce_fk_auth_user_id">
       <ColNames>user_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>auth_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="726" parent="275" name="residenceinn_userprofile_inviter_id_4c8a71e5_fk_auth_user_id">
+    <foreign-key id="727" parent="275" name="residenceinn_userprofile_inviter_id_4c8a71e5_fk_auth_user_id">
       <ColNames>inviter_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>auth_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="727" parent="276" name="id">
+    <column id="728" parent="276" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="728" parent="276" name="balance">
+    <column id="729" parent="276" name="balance">
       <Position>2</Position>
       <DataType>decimal(12,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="729" parent="276" name="owner_id">
+    <column id="730" parent="276" name="owner_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="730" parent="276" name="owner_id">
+    <index id="731" parent="276" name="owner_id">
       <ColNames>owner_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="731" parent="276" name="PRIMARY">
+    <key id="732" parent="276" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="732" parent="276" name="owner_id">
+    <key id="733" parent="276" name="owner_id">
       <ColNames>owner_id</ColNames>
       <UnderlyingIndexName>owner_id</UnderlyingIndexName>
     </key>
-    <foreign-key id="733" parent="276" name="residenceinn_wallet_owner_id_a3095879_fk_auth_user_id">
+    <foreign-key id="734" parent="276" name="residenceinn_wallet_owner_id_a3095879_fk_auth_user_id">
       <ColNames>owner_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>auth_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="734" parent="277" name="id">
+    <column id="735" parent="277" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="735" parent="277" name="provider">
+    <column id="736" parent="277" name="provider">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="736" parent="277" name="uid">
+    <column id="737" parent="277" name="uid">
       <Position>3</Position>
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="737" parent="277" name="last_login">
+    <column id="738" parent="277" name="last_login">
       <Position>4</Position>
       <DataType>datetime(6)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="738" parent="277" name="date_joined">
+    <column id="739" parent="277" name="date_joined">
       <Position>5</Position>
       <DataType>datetime(6)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="739" parent="277" name="extra_data">
+    <column id="740" parent="277" name="extra_data">
       <Position>6</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="740" parent="277" name="user_id">
+    <column id="741" parent="277" name="user_id">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="741" parent="277" name="socialaccount_socialaccount_provider_uid_fc810c6e_uniq">
+    <index id="742" parent="277" name="socialaccount_socialaccount_provider_uid_fc810c6e_uniq">
       <ColNames>provider
 uid</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="742" parent="277" name="socialaccount_socialaccount_user_id_8146e70c_fk_auth_user_id">
+    <index id="743" parent="277" name="socialaccount_socialaccount_user_id_8146e70c_fk_auth_user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="743" parent="277" name="PRIMARY">
+    <key id="744" parent="277" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="744" parent="277" name="socialaccount_socialaccount_provider_uid_fc810c6e_uniq">
+    <key id="745" parent="277" name="socialaccount_socialaccount_provider_uid_fc810c6e_uniq">
       <ColNames>provider
 uid</ColNames>
       <UnderlyingIndexName>socialaccount_socialaccount_provider_uid_fc810c6e_uniq</UnderlyingIndexName>
     </key>
-    <foreign-key id="745" parent="277" name="socialaccount_socialaccount_user_id_8146e70c_fk_auth_user_id">
+    <foreign-key id="746" parent="277" name="socialaccount_socialaccount_user_id_8146e70c_fk_auth_user_id">
       <ColNames>user_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>auth_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="746" parent="278" name="id">
+    <column id="747" parent="278" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="747" parent="278" name="provider">
+    <column id="748" parent="278" name="provider">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="748" parent="278" name="name">
+    <column id="749" parent="278" name="name">
       <Position>3</Position>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="749" parent="278" name="client_id">
+    <column id="750" parent="278" name="client_id">
       <Position>4</Position>
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="750" parent="278" name="secret">
+    <column id="751" parent="278" name="secret">
       <Position>5</Position>
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="751" parent="278" name="key">
+    <column id="752" parent="278" name="key">
       <Position>6</Position>
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="752" parent="278" name="PRIMARY">
+    <key id="753" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="753" parent="279" name="id">
+    <column id="754" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="754" parent="279" name="socialapp_id">
+    <column id="755" parent="279" name="socialapp_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="755" parent="279" name="site_id">
+    <column id="756" parent="279" name="site_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="756" parent="279" name="socialaccount_socialapp_sites_socialapp_id_site_id_71a9a768_uniq">
+    <index id="757" parent="279" name="socialaccount_socialapp_sites_socialapp_id_site_id_71a9a768_uniq">
       <ColNames>socialapp_id
 site_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="757" parent="279" name="socialaccount_socialapp_sites_site_id_2579dee5_fk_django_site_id">
+    <index id="758" parent="279" name="socialaccount_socialapp_sites_site_id_2579dee5_fk_django_site_id">
       <ColNames>site_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="758" parent="279" name="PRIMARY">
+    <key id="759" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="759" parent="279" name="socialaccount_socialapp_sites_socialapp_id_site_id_71a9a768_uniq">
+    <key id="760" parent="279" name="socialaccount_socialapp_sites_socialapp_id_site_id_71a9a768_uniq">
       <ColNames>socialapp_id
 site_id</ColNames>
       <UnderlyingIndexName>socialaccount_socialapp_sites_socialapp_id_site_id_71a9a768_uniq</UnderlyingIndexName>
     </key>
-    <foreign-key id="760" parent="279" name="socialaccount_social_socialapp_id_97fb6e7d_fk_socialacc">
+    <foreign-key id="761" parent="279" name="socialaccount_social_socialapp_id_97fb6e7d_fk_socialacc">
       <ColNames>socialapp_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>socialaccount_socialapp</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="761" parent="279" name="socialaccount_socialapp_sites_site_id_2579dee5_fk_django_site_id">
+    <foreign-key id="762" parent="279" name="socialaccount_socialapp_sites_site_id_2579dee5_fk_django_site_id">
       <ColNames>site_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>django_site</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="762" parent="280" name="id">
+    <column id="763" parent="280" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="763" parent="280" name="token">
+    <column id="764" parent="280" name="token">
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="764" parent="280" name="token_secret">
+    <column id="765" parent="280" name="token_secret">
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="765" parent="280" name="expires_at">
+    <column id="766" parent="280" name="expires_at">
       <Position>4</Position>
       <DataType>datetime(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="766" parent="280" name="account_id">
+    <column id="767" parent="280" name="account_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="767" parent="280" name="app_id">
+    <column id="768" parent="280" name="app_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="768" parent="280" name="socialaccount_socialtoken_app_id_account_id_fca4e0ac_uniq">
+    <index id="769" parent="280" name="socialaccount_socialtoken_app_id_account_id_fca4e0ac_uniq">
       <ColNames>app_id
 account_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="769" parent="280" name="socialaccount_social_account_id_951f210e_fk_socialacc">
+    <index id="770" parent="280" name="socialaccount_social_account_id_951f210e_fk_socialacc">
       <ColNames>account_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="770" parent="280" name="PRIMARY">
+    <key id="771" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="771" parent="280" name="socialaccount_socialtoken_app_id_account_id_fca4e0ac_uniq">
+    <key id="772" parent="280" name="socialaccount_socialtoken_app_id_account_id_fca4e0ac_uniq">
       <ColNames>app_id
 account_id</ColNames>
       <UnderlyingIndexName>socialaccount_socialtoken_app_id_account_id_fca4e0ac_uniq</UnderlyingIndexName>
     </key>
-    <foreign-key id="772" parent="280" name="socialaccount_social_account_id_951f210e_fk_socialacc">
+    <foreign-key id="773" parent="280" name="socialaccount_social_account_id_951f210e_fk_socialacc">
       <ColNames>account_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>socialaccount_socialaccount</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="773" parent="280" name="socialaccount_social_app_id_636a42d7_fk_socialacc">
+    <foreign-key id="774" parent="280" name="socialaccount_social_app_id_636a42d7_fk_socialacc">
       <ColNames>app_id</ColNames>
       <RefSchemaName>goleta</RefSchemaName>
       <RefTableName>socialaccount_socialapp</RefTableName>

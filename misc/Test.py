@@ -52,7 +52,7 @@ def addlableapps():
             print(name)
     label.save()
 
-def add_a_new_app():
+def upload_log_apk():
     app = App.objects.filter(app_name='币车').all()[0]
     local_file = open('/root/www/goleta/media/upload/app/logo/tmp.png', 'rb')
     file = File(local_file)
