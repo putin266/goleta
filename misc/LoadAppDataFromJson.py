@@ -43,11 +43,11 @@ def update_app_from_json():
                 app.android_apk.save(get_file_name(app_json['android_apk']), r.raw)
             else:
                print('apk failed')
-        for root, dirs, files in os.walk('/Users/Ethan/Downloads/appicon/'):
+        for root, dirs, files in os.walk('/var/www/appicon/'):
             if str(i) + '.png' in files:
-                local_file = open('/Users/Ethan/Downloads/appicon/' + str(i) + '.png', 'rb')
+                local_file = open('/var/www/appicon/' + str(i) + '.png', 'rb')
             else:
-                local_file = open('/Users/Ethan/Downloads/appicon/' + str(i) + '.jpg', 'rb')
+                local_file = open('/var/www/appicon/' + str(i) + '.jpg', 'rb')
         file = File(local_file)
         salt = ''.join(random.sample(string.digits, 6))
         app.app_logo.save(salt + '.png', file)
