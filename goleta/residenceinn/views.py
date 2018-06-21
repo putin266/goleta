@@ -158,7 +158,9 @@ class AppLeaderBoardView(views.APIView):
 
     def get(self, request):
         return_data = {}
-        applabellist = AppSerializer(App.objects.filter(leaderboard_index__gt=0).order_by('leaderboard_index'), many=True)
+        applabellist = AppSerializer(App.objects.filter(leaderboard_index__gt=0).order_by('leaderboard_index'),
+                                     many=True,
+                                     context={"request": request})
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
