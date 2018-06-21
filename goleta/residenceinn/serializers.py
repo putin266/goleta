@@ -55,7 +55,7 @@ class AppLabelSerializerForIndex(serializers.ModelSerializer):
 
     def get_apps(self, label):
         label = AppLabel.objects.filter(id=label.id).first()
-        return AppSerializer(label.apps.all()[:4], many=True).data
+        return AppSerializer(label.apps.all()[:4], many=True, context={"request": self.context['request']}).data
 
     class Meta:
         model = AppLabel

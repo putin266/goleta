@@ -118,9 +118,9 @@ class IndexView(views.APIView):
 
     def get(self, request):
         return_data = {}
-        bannerlist = BannerSerializer(Banner.objects.filter(type=1).all(), many=True)
+        bannerlist = BannerSerializer(Banner.objects.filter(type=1).all(), many=True, context={"request": request})
         return_data['bannerlist'] = bannerlist.data
-        applabellist = AppLabelSerializerForIndex(AppLabel.objects.filter(type=1).all(), many=True)
+        applabellist = AppLabelSerializerForIndex(AppLabel.objects.filter(type=1).all(), many=True, context={"request": request})
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
@@ -135,7 +135,7 @@ class SeletedAppsView(views.APIView):
         return_data = {}
         bannerlist = BannerSerializer(Banner.objects.filter(type=2).all(), many=True)
         return_data['bannerlist'] = bannerlist.data
-        applabellist = AppLabelSerializer(AppLabel.objects.filter(type=2).all()[0])
+        applabellist = AppLabelSerializer(AppLabel.objects.filter(type=2).all()[0], context={"request": request})
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
