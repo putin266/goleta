@@ -22,9 +22,24 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('url', 'username', 'first_name', 'last_name', 'email')
 
 
+class WalletSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Wallet
+        fields = ('balance',)
+
+
 class UserProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
     inviter = UserSerializer()
+    balance = SerializerMethodField('get_user_balance')
+
+    def get_user_balance(self, request):
+        user = request.user
+        try:
+            wallet = Wallet.objects.get(owner=user)
+        except Wallet.DoesNotExist:
+            return 0
+        return wallet.balance
 
     class Meta:
         model = UserProfile
