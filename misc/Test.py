@@ -131,5 +131,11 @@ def create_user_profile():
     pass
 
 
-get_random_string()
+def delete_app():
+    app = App.objects.filter(app_name='币用宝').all()[0]
+    if app is not None:
+        print('found app')
+    app.delete()
+
+delete_app()
 

@@ -84,6 +84,12 @@ class ShortNewsSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class AirDropSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AirDrop
+        fields = '__all__'
+
+
 class BannerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Banner

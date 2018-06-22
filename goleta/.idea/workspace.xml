@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73b124e0-8743-4e7d-823d-e350642f2e2a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/residenceinn/migrations/0022_airdrop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ad0ee62-f615-4712-8bd4-ceacd188ddd6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9ad0ee62-f615-4712-8bd4-ceacd188ddd6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goleta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goleta/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goleta/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/goleta/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/residenceinn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/residenceinn/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/residenceinn/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/residenceinn/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/residenceinn/smsconst.py" beforeDir="false" afterPath="$PROJECT_DIR$/residenceinn/smsconst.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/residenceinn/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/residenceinn/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../misc/CreateAppLabels.py" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/CreateAppLabels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../misc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../misc/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../misc/modulelist" beforeDir="false" afterPath="$PROJECT_DIR$/../misc/modulelist" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,12 +61,57 @@
     <favorites_list name="goleta" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goleta/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="211" selection-start-line="211" selection-end-line="211" />
+            <state relative-caret-position="2640">
+              <caret line="176" column="18" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goleta/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="residenceinn_airdrop" pinned="false" current-in-tab="false">
+        <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_airdrop">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/residenceinn/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -83,15 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login_rul</find>
-      <find>login</find>
-      <find>goleta</find>
-      <find>reside</find>
-      <find>RegisterSerializer</find>
-      <find>csrf</find>
-      <find>appsearch</find>
-      <find>password</find>
-      <find>passwordnnn</find>
       <find>default_token_generator</find>
       <find>default_token_generatorn</find>
       <find>default_token_gen</find>
@@ -107,12 +144,21 @@
       <find>ALLAUTH_SETTING_GETTER</find>
       <find>profile</find>
       <find>prp</find>
-      <find>userprofile</find>
       <find>onechain</find>
       <find>布洛克城</find>
       <find>type == 2</find>
       <find>type</find>
       <find>type=2</find>
+      <find>SESSION_COOKIE_SECURE</find>
+      <find>AppLabelSerializerForIndex</find>
+      <find>leader</find>
+      <find>appserializer</find>
+      <find>AppLabelSerializer</find>
+      <find>wallet</find>
+      <find>userprofile</find>
+      <find>airdrop</find>
+      <find>airedr</find>
+      <find>orderby</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/templates</dir>
@@ -137,11 +183,11 @@
         <option value="$PROJECT_DIR$/rest_framework_swagger/static/init.js" />
         <option value="$PROJECT_DIR$/residenceinn/sms_send.py" />
         <option value="$PROJECT_DIR$/residenceinn/smsconst.py" />
-        <option value="$PROJECT_DIR$/residenceinn/models.py" />
+        <option value="$PROJECT_DIR$/goleta/settings.py" />
         <option value="$PROJECT_DIR$/residenceinn/serializers.py" />
         <option value="$PROJECT_DIR$/goleta/urls.py" />
+        <option value="$PROJECT_DIR$/residenceinn/models.py" />
         <option value="$PROJECT_DIR$/residenceinn/views.py" />
-        <option value="$PROJECT_DIR$/goleta/settings.py" />
       </list>
     </option>
   </component>
@@ -155,8 +201,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -166,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,15 +242,22 @@
               <item name="goleta" type="462c0819:PsiDirectoryNode" />
               <item name="residenceinn" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="goleta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goleta" type="462c0819:PsiDirectoryNode" />
+              <item name="residenceinn" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="setting&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;view&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;ser&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;url&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/urls.py&#10;model&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;mod&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;seri&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;serial&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;mo&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;views&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;smscon&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/smsconst.py&#10;zh_&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/locale/zh_CN&#10;seria&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;urls&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/urls.py&#10;cons&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/smsconst.py&#10;settings&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;vie&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;o&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;settin&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;serializers.py&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;apps.p&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/apps.py&#10;set&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;se&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;sett&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;restframework.&#9;FILE&#9;file:///usr/local/lib/python3.6/site-packages/rest_framework/templatetags/rest_framework.py&#10;ru&#9;ACTION&#9;ActivateRunToolWindow&#10;Serial&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;models&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;views.py&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;login.html&#9;FILE&#9;file:///usr/local/lib/python3.6/site-packages/allauth/templates/account/login.html&#10;login_base.&#9;FILE&#9;file:///usr/local/lib/python3.6/site-packages/rest_framework/templates/rest_framework/login_base.html" />
+    <property name="SearchEverywhereHistoryKey" value="view&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;ser&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;mo&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;mod&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;url&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/urls.py&#10;seria&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;seri&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;model&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;seriali&#9;FILE&#9;file:///usr/local/lib/python3.6/site-packages/rest_auth/registration/serializers.py&#10;serial&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;settings&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;urls&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/urls.py&#10;setting&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;views&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;smscon&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/smsconst.py&#10;zh_&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/locale/zh_CN&#10;cons&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/smsconst.py&#10;vie&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;o&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;settin&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;serializers.py&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;apps.p&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/apps.py&#10;set&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;se&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;sett&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/goleta/settings.py&#10;restframework.&#9;FILE&#9;file:///usr/local/lib/python3.6/site-packages/rest_framework/templatetags/rest_framework.py&#10;ru&#9;ACTION&#9;ActivateRunToolWindow&#10;Serial&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/serializers.py&#10;models&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/models.py&#10;views.py&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/goleta/residenceinn/views.py&#10;login.html&#9;FILE&#9;file:///usr/local/lib/python3.6/site-packages/allauth/templates/account/login.html&#10;login_base.&#9;FILE&#9;file:///usr/local/lib/python3.6/site-packages/rest_framework/templates/rest_framework/login_base.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -325,11 +377,12 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.26909092" />
-      <window_info active="true" anchor="bottom" id="manage.py@goleta" order="7" visible="true" weight="0.21090908" />
+      <window_info active="true" anchor="bottom" id="manage.py@goleta" order="7" visible="true" weight="0.17212121" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32848486" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4961637" weight="0.16309012" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32969698" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4961637" visible="true" weight="0.16309012" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" weight="0.16666667" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24034335" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -340,23 +393,22 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32969698" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24964234" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" sideWeight="0.50383633" side_tool="true" weight="0.115015976" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4961637" visible="true" weight="0.16309012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.26909092" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.26909092" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.16666667" />
       <window_info anchor="bottom" id="manage.py@goleta" order="7" visible="true" weight="0.21090908" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32969698" />
@@ -366,7 +418,7 @@
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32969698" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32848486" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.50383633" side_tool="true" weight="0.115015976" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,13 +438,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.6/site-packages/django/conf/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -463,13 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/allauth/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="818" selection-start-line="818" selection-end-line="818" />
         </state>
       </provider>
     </entry>
@@ -577,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="221" column="8" selection-start-line="221" selection-start-column="8" selection-end-line="221" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_userprofile">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -626,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/rest_auth/registration/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_applabel">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -654,38 +678,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
+    <entry file="file:///usr/local/lib/python3.6/site-packages/allauth/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="432">
+          <caret line="813" selection-start-line="813" selection-end-line="813" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
+    <entry file="file:///usr/local/lib/python3.6/site-packages/rest_auth/registration/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        <state relative-caret-position="210">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goleta/urls.py">
+    <entry file="file:///usr/local/lib/python3.6/site-packages/rest_framework/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        <state relative-caret-position="-754">
+          <caret line="86" column="6" selection-start-line="86" selection-start-column="6" selection-end-line="86" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goleta/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        <state relative-caret-position="2640">
+          <caret line="176" column="18" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goleta/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ad0ee62-f615-4712-8bd4-ceacd188ddd6/schema/goleta/table/residenceinn_airdrop">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/residenceinn/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/residenceinn/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
         </state>
       </provider>
     </entry>

@@ -85,3 +85,19 @@ class KeyValue(models.Model):
     date_expired = models.DateTimeField()
     date_created = models.DateTimeField(auto_now_add=True)
 
+
+class AirDrop(models.Model):
+    id = models.AutoField(primary_key=True)
+    project_name = models.CharField(max_length=254, db_index=True)
+    coin_name = models.CharField(max_length=254)
+    desc = models.TextField(blank=True, null=True)
+    airdrop_url = models.CharField(max_length=254, blank=True, null=True)
+    starts = models.IntegerField(null=True, blank=True)
+    record_date = models.DateTimeField(blank=True, null=True)
+    is_need_apply = models.BooleanField(default=False)
+    is_ethereum = models.BooleanField(default=False)
+    is_mail = models.BooleanField(default=False)
+    is_mobile = models.BooleanField(default=False)
+    is_telegram = models.BooleanField(default=False)
+    is_twitter = models.BooleanField(default=False)
+    index = models.IntegerField(default=99)

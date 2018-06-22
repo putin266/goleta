@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a85cf64a-021f-494a-a9c7-a1e4bc478c7e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CreateBanners.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FetchShortNewsData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../goleta/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../goleta/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../goleta/goleta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../goleta/goleta/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../goleta/goleta/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../goleta/goleta/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../goleta/residenceinn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../goleta/residenceinn/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../goleta/residenceinn/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../goleta/residenceinn/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../goleta/residenceinn/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../goleta/residenceinn/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goleta/residenceinn/smsconst.py" beforeDir="false" afterPath="$PROJECT_DIR$/../goleta/residenceinn/smsconst.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateAppLabels.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateAppLabels.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UpdateDatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/UpdateDatabase.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,6 +19,7 @@
     <SUITE FILE_PATH="coverage/misc$FetchAppListData.coverage" NAME="FetchAppListData Coverage Results" MODIFIED="1527833426686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/misc$CreateAppLabels.coverage" NAME="CreateAppLabels Coverage Results" MODIFIED="1527923694069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/misc$FetchShortNewsData.coverage" NAME="FetchShortNewsData Coverage Results" MODIFIED="1527990122445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/misc$bs4test.coverage" NAME="bs4test Coverage Results" MODIFIED="1529642445922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/misc$test.coverage" NAME="test Coverage Results" MODIFIED="1527836164698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/misc$Test.coverage" NAME="Test Coverage Results" MODIFIED="1527921976950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/misc$CreateBanners.coverage" NAME="CreateBanners Coverage Results" MODIFIED="1527992418499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -46,7 +40,31 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="bs4test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bs4test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+              <folding>
+                <element signature="e#42#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#42#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,6 +95,7 @@
         <option value="$PROJECT_DIR$/CreateAppLabels.py" />
         <option value="$PROJECT_DIR$/FetchShortNewsData.py" />
         <option value="$PROJECT_DIR$/CreateBanners.py" />
+        <option value="$PROJECT_DIR$/bs4test.py" />
       </list>
     </option>
   </component>
@@ -90,8 +109,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="136" />
+    <option name="y" value="75" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -124,7 +145,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/CreateBanners.py&#10;fetch&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/FetchAppListData.py&#10;fet&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/FetchShortNewsData.py&#10;fe&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/FetchShortNewsData.py&#10;createban&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/CreateBanners.py" />
+    <property name="SearchEverywhereHistoryKey" value="mode&#9;null&#9;null&#10;fetch&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/FetchAppListData.py&#10;fet&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/FetchShortNewsData.py&#10;fe&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/FetchShortNewsData.py&#10;createban&#9;FILE&#9;file:///Users/Ethan/projects/GitHubProjects/goleta/misc/CreateBanners.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -142,7 +163,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.CreateBanners">
+  <component name="RunManager" selected="Python.bs4test">
     <configuration name="CreateAppLabels" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="misc" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -219,7 +240,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="UpdateDatabase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bs4test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="misc" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -232,7 +253,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UpdateDatabase.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bs4test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,18 +261,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.CreateAppLabels" />
-      <item itemvalue="Python.UpdateDatabase" />
       <item itemvalue="Python.Test" />
       <item itemvalue="Python.FetchShortNewsData" />
       <item itemvalue="Python.CreateBanners" />
+      <item itemvalue="Python.bs4test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bs4test" />
         <item itemvalue="Python.CreateBanners" />
         <item itemvalue="Python.FetchShortNewsData" />
         <item itemvalue="Python.CreateAppLabels" />
         <item itemvalue="Python.Test" />
-        <item itemvalue="Python.UpdateDatabase" />
       </list>
     </recent_temporary>
   </component>
@@ -270,15 +291,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32969698" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40121213" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.34545454" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3448718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20386267" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
@@ -313,6 +335,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bs4test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#42#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FetchAppListData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -369,13 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FetchShortNewsData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -401,6 +426,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/-1199943127/xml/parsers/expat/model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#42#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bs4test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="e#42#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

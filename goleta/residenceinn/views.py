@@ -28,7 +28,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 class UserProfileViewSet(mixins.ListModelMixin,
-                         mixins.RetrieveModelMixin,
                          mixins.UpdateModelMixin,
                          viewsets.GenericViewSet):
     """
@@ -108,6 +107,16 @@ class BannerViewSet(mixins.ListModelMixin,
     # authentication_classes = (OAuth2Authentication,)
     queryset = Banner.objects.all()
     serializer_class = BannerSerializer
+
+
+class AirDropViewSet(mixins.ListModelMixin,
+                     viewsets.GenericViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    permission_classes = []
+    queryset = AirDrop.objects.all().order_by('index')
+    serializer_class = AirDropSerializer
 
 
 class IndexView(views.APIView):
