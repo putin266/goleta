@@ -53,16 +53,45 @@ class GroupSerializer(serializers.ModelSerializer):
 
 
 class AppSerializer(serializers.ModelSerializer):
+    app_detail = serializers.SerializerMethodField()
+
+    def get_app_detail(self, app):
+        try:
+            app_detail = AppDetail.objects.get(app=app)
+            return app_detail.id
+        except AppDetail.DoesNotExist:
+            return None
+
     class Meta:
         model = App
         fields = '__all__'
 
 
+class AppDetailImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AppDetailImage
+        fields = ('index', 'image',)
+
+
+class AppDetailSerializer(serializers.ModelSerializer):
+    images = SerializerMethodField()
+
+    def get_images(self, app_detail):
+        image_list = AppDetailImage.objects.filter(app_detail=app_detail).all()
+        return AppDetailImageSerializer(image_list, many=True, context={'request': self.context['request']}).data
+
+    class Meta:
+        model = AppDetail
+        fields = '__all__'
+        depth = 1
+
+
 class AppLabelSerializer(serializers.ModelSerializer):
+    apps = AppSerializer(many=True)
+
     class Meta:
         model = AppLabel
         fields = '__all__'
-        depth = 1
 
 
 class AppLabelSerializerForIndex(serializers.ModelSerializer):

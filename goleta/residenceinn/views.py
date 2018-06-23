@@ -61,6 +61,13 @@ class AppViewSet(mixins.ListModelMixin,
     serializer_class = AppSerializer
 
 
+class AppDetailViewSet(mixins.RetrieveModelMixin,
+                       viewsets.GenericViewSet):
+    permission_classes = []
+    queryset = AppDetail.objects.all()
+    serializer_class = AppDetailSerializer
+
+
 class PaginatedAppView(views.APIView):
     """
     API endpoint that allows paginated groups to be viewed or edited.

@@ -107,7 +107,21 @@ def do():
                 ad.is_twitter = is_twitter
                 ad.save()
 
-do()
+def do2():
+    r = requests.get(url='http://byb.world/index.php/Index/appinfo/id/58')
+    if r.status_code == 200:
+        print('get appinfo detail success')
+        soup = BeautifulSoup(r.content, 'lxml')
+        img_tags = soup.find(id='sass').find_all('img')
+        for img in img_tags:
+            print(img['src'])
+        desc = soup.find_all('div', {'class': 'detail-cen-item detail-cen-item-first'})
+        if len(desc) > 0:
+            desc = desc[0]
+            print(str(desc).encode('utf-8'))
+
+
+do2()
 
 
 

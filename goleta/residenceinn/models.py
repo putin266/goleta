@@ -36,6 +36,19 @@ class App(models.Model):
     web_url = models.TextField(blank=True, null=True)
 
 
+class AppDetail(models.Model):
+    id = models.AutoField(primary_key=True)
+    app = models.OneToOneField(App, on_delete=models.CASCADE, db_index=True)
+    app_desc = models.TextField(blank=True, null=True)
+
+
+class AppDetailImage(models.Model):
+    id = models.AutoField(primary_key=True)
+    app_detail = models.ForeignKey(AppDetail, on_delete=models.CASCADE, db_index=True)
+    index = models.IntegerField(default=1, blank=True, null=True)
+    image = models.ImageField(upload_to='upload/app/detail/', blank=True, null=True)
+
+
 class AppLabel(models.Model):
     id = models.AutoField(primary_key=True)
     code = models.IntegerField(blank=True, null=True)

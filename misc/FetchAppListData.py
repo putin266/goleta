@@ -6,12 +6,15 @@ import django
 import requests
 from MyUtils import MyUtils
 from django.conf import settings
+from PIL import Image
+from bs4 import BeautifulSoup
+from datetime import datetime, timezone
 
 sys.path.append("../goleta")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goleta.settings")
 django.setup()
 
-from residenceinn.models import App, AppLabel
+from residenceinn.models import *
 
 def do():
     typelist = [11, 1, 2, 4, 13, 14, 15]
@@ -39,6 +42,12 @@ def do():
                 else:
                     app = applist[0]
                     update_app(app, appinfo)
+                try:
+                    app_detail = AppDetail.objects.get(app=app)
+                except AppDetail.DoesNotExist:
+                    app_detail = AppDetail.objects.create(app=app)
+                app_detail.save()
+                update_app_detail(appinfo['id'], app_detail)
             label.save()
 
 
@@ -82,5 +91,38 @@ def update_app(app, appinfo):
     app.save()
 
 
-do()
+def mycrop(file_path):
+    print(file_path)
+    img = Image.open(file_path)
+    print('size:' + str(img.size))
+    area = (66 / 400 * img.size[0], 145 / 800 * img.size[1], 335 / 400 * img.size[0], 650 / 800 * img.size[1])
+    img = img.crop(area)
+    img.save(file_path)
 
+
+def update_app_detail(app_id, app_detail):
+    app_detail_imagelist = AppDetailImage.objects.filter(app_detail=app_detail)
+    if len(app_detail_imagelist) == 0:
+        r = requests.get(url='http://byb.world/index.php/Index/appinfo/id/' + app_id, stream=True)
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.content, 'lxml')
+            desc = soup.find_all('div', {'class': 'detail-cen-item detail-cen-item-first'})
+            if len(desc) > 0:
+                desc = desc[0]
+                app_detail.app_desc = str(desc)
+                app_detail.save()
+            img_tags = soup.find(id='sass').find_all('img')
+            index = 0
+            for img in img_tags:
+               index = index + 1
+               r2 = requests.get(url='http://byb.world' + img['src'], stream=True)
+               if r2.status_code == 200:
+                   app_detail_img = AppDetailImage.objects.create(app_detail=app_detail)
+                   print('app detail img success')
+                   r2.raw.decode_content = True
+                   app_detail_img.image.save(get_file_name(img['src']), r2.raw)
+                   app_detail_img.index = index
+                   app_detail_img.save()
+                   mycrop(settings.MEDIA_ROOT + '/' + app_detail_img.image.name)
+
+do()

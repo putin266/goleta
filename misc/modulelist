@@ -10,3 +10,6 @@ gunicorn
 django-rest-auth
 djangorestframework-jwt
 aliyun_sms
+beautifulsoup4
+lxml
+Pillow
