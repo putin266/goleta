@@ -34,6 +34,8 @@ def do():
                     label.img.save(get_file_name(typeinfo['pic']), r.raw)
             yylist = content['yylist']
             for appinfo in yylist:
+                if appinfo['app_name'] == '币用宝':
+                    continue
                 applist = App.objects.filter(app_name=appinfo['app_name'])
                 if not len(applist) > 0:
                     app = App(app_name=appinfo['app_name'])

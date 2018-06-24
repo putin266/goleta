@@ -193,7 +193,7 @@ class AppSearchView(views.APIView):
         for app in App.objects.all():
             if app_name.lower() in app.app_name.lower():
                 applist.append(app)
-        applabellist = AppSerializer(applist, many=True)
+        applabellist = AppSerializer(applist, many=True, context={'request': request})
         return_data['applist'] = applabellist.data
         return response.Response(return_data, status.HTTP_200_OK)
 
@@ -248,6 +248,22 @@ class SendConfirmationCodeView(views.APIView):
     @staticmethod
     def get_new_salt():
         return ''.join(random.sample(string.digits, 6))
+
+
+class CheckMobileNumberExistView(views.APIView):
+    """
+    API endpoint that let server to check the mobile number is available
+    """
+    permission_classes = []
+
+    def get(self, request, mobile_number):
+        if mobile_number == '':
+            is_exist = True
+        else:
+            profiles = UserProfile.objects.filter(mobile_number=mobile_number)
+            is_exist = len(profiles) > 0
+        return_data = {"is_exist": is_exist}
+        return response.Response(return_data, status.HTTP_200_OK)
 
 
 class SendPasswordResetSmsCodeView(views.APIView):
