@@ -14,7 +14,7 @@ sys.path.append("../goleta")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goleta.settings")
 django.setup()
 
-from residenceinn.models import App, AppLabel, Banner
+from residenceinn.models import *
 
 def update_banner_type():
     banners = Banner.objects.all()
@@ -137,5 +137,16 @@ def delete_app():
         print('found app')
     app.delete()
 
-delete_app()
+
+def find_app_without_detail():
+    applist = App.objects.all()
+    for app in applist:
+        try:
+            appdetail = AppDetail.objects.get(app=app)
+            if len(AppDetailImage.objects.filter(app_detail=appdetail)) == 0:
+                print(app.id)
+        except AppDetail.DoesNotExist:
+            print(app.id)
+
+find_app_without_detail()
 
