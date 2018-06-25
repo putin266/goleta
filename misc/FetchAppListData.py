@@ -9,6 +9,7 @@ from django.conf import settings
 from PIL import Image
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
+from django.core.files import File
 
 sys.path.append("../goleta")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goleta.settings")
@@ -126,5 +127,33 @@ def update_app_detail(app_id, app_detail):
                    app_detail_img.index = index
                    app_detail_img.save()
                    mycrop(settings.MEDIA_ROOT + '/' + app_detail_img.image.name)
+
+
+def add_new_app_detail_from_file(path):
+    for filename in os.listdir(path):
+        if '.png' in filename:
+            appid = filename.split('.')[0].split('_')[0]
+            index = filename.split('.')[0].split('_')[1]
+            try:
+                app = App.objects.get(id=appid)
+            except App.DoesNotExist:
+                print(appid + ' does not exist')
+                continue
+            try:
+                app_detail = AppDetail.objects.get(app=app)
+            except AppDetail.DoesNotExist:
+                app_detail = AppDetail.objects.create(app=app)
+                app_detail.save()
+            detailimglist = AppDetailImage.objects.filter(app_detail=app_detail, index=index)
+            if len(detailimglist) == 0:
+                local_file = open(path + '/' + filename, 'rb')
+                file = File(local_file)
+                appdetailimg = AppDetailImage.objects.create(app_detail=app_detail)
+                appdetailimg.image.save(filename, file)
+                local_file.close()
+                appdetailimg.index = index
+                appdetailimg.save()
+            else:
+                print(appid + '/' + index + ' exist')
 
 do()

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73b124e0-8743-4e7d-823d-e350642f2e2a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/residenceinn/exception_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goleta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/goleta/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/zh_CN/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/zh_CN/LC_MESSAGES/django.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/residenceinn/smsconst.py" beforeDir="false" afterPath="$PROJECT_DIR$/residenceinn/smsconst.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,15 +84,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exception_handler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/residenceinn/exception_handler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/residenceinn/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -147,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app_detail</find>
       <find>get_filename</find>
       <find>storage</find>
       <find>storag</find>
@@ -177,6 +165,7 @@
       <find>exception</find>
       <find>raise_</find>
       <find>rest</find>
+      <find>return_msg</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/templates</dir>
@@ -206,8 +195,8 @@
         <option value="$PROJECT_DIR$/residenceinn/models.py" />
         <option value="$PROJECT_DIR$/locale/zh_CN/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/residenceinn/views.py" />
-        <option value="$PROJECT_DIR$/residenceinn/exception_handler.py" />
         <option value="$PROJECT_DIR$/goleta/settings.py" />
+        <option value="$PROJECT_DIR$/residenceinn/exception_handler.py" />
       </list>
     </option>
   </component>
@@ -742,6 +731,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/residenceinn/exception_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/locale/zh_CN/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -756,13 +752,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residenceinn/exception_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
         </state>
       </provider>
     </entry>
