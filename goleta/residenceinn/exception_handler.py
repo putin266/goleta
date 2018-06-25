@@ -9,7 +9,10 @@ def custom_exception_handler(exc, context):
     # Now add the HTTP status code to the response.
     if response is not None:
         if response.status_code == 400:
-            response.data['status_code'] = response.status_code
+            return_data = {}
+            return_data['error_msg'] = response.data
+            return_data['status_code'] = response.status_code
+            response.data = return_data
             response.status_code = 200
 
     return response
