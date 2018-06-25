@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-17 05:59+0000\n"
+"POT-Creation-Date: 2018-06-25 02:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: residenceinn/serializers.py:71
+#: residenceinn/serializers.py:148 residenceinn/serializers.py:244
 msgid "Invalid Mobile Number."
 msgstr "无效的手机号。"
 
-#: residenceinn/serializers.py:75
+#: residenceinn/serializers.py:152
 msgid "Mobile number is being used."
 msgstr "手机号已经被使用。"
 
-#: residenceinn/serializers.py:83
+#: residenceinn/serializers.py:161 residenceinn/serializers.py:165
+#: residenceinn/serializers.py:254
 msgid "SMS password not correct."
 msgstr "短信验证码不正确。"
+
+#: residenceinn/serializers.py:250
+msgid "Invalid password."
+msgstr "无效密码。"
